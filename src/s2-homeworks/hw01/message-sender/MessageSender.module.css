@@ -32,7 +32,7 @@
 }
 
 .button:hover {
-    background: red;
+    background: slategray;
 }
 
 .button:active {
