@@ -4,13 +4,12 @@ import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
-import User from "../hw08/User";
 
 /*
-* 1 - описать тип MessageType
-* 2 - описать тип MessagePropsType в файле Message.tsx
-* 3 - в файле Message.tsx отобразить приходящие данные
-* 4 - выполнить пункты 2, 3 в файле FriendMessage.tsx
+* 1 - описать тип MessageType done
+* 2 - описать тип MessagePropsType в файле Message.tsx done
+* 3 - в файле Message.tsx отобразить приходящие данные done
+* 4 - выполнить пункты 2, 3 в файле FriendMessage.tsx done
 * 5 - сделать стили в соответствии с дизайном
 * */
 
@@ -32,10 +31,10 @@ export const message0: MessageType = {
     id: 0,
     user: {
         avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        name: 'Bob',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
+        text: 'Hello World', // можно менять
         time: '22:00', // можно менять
     },
 }
@@ -43,7 +42,7 @@ export const friendMessage0: MessageType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        name: 'Steve', // можно менять
     },
     message: {
         text: 'зеркальное сообщение для тренировки css', // можно менять
@@ -58,12 +57,12 @@ const HW1 = () => {
             <div className={s2.hw}>
                 {/*проверка отображения (не менять)*/}
                 <div>
-                    <Message message={message0} />
-                    <FriendMessage message={friendMessage0} />
+                    <Message message={message0}/>
+                    <FriendMessage message={friendMessage0}/>
                 </div>
 
                 {/*для автоматической проверки дз (не менять)*/}
-                <MessageSender M={Message} />
+                <MessageSender M={Message}/>
             </div>
         </div>
     )
