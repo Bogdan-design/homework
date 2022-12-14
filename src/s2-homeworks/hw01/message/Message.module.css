@@ -3,6 +3,9 @@
     flex-direction: column;
     align-items: flex-end;
     padding-right: 70px;
+    padding-top: 24px;
+
+
 }
 
 .imageAndText {
