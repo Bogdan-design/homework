@@ -37,11 +37,11 @@ const defaultAffairs: AffairType[] = [ // need to fix any
 // pure helper functions
 export const filterAffairs = (affairs: AffairType[], filter: FilterType ): AffairType[] => { // need to fix any
     if(filter==='all') {
-        return defaultAffairs // need to fix
-    } return defaultAffairs.filter(el=>el.priority === filter)
+        return affairs // need to fix
+    } return affairs.filter(el=>el.priority === filter)
 
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
+export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
 
     return affairs // need to fix
 }
