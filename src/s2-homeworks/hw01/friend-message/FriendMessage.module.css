@@ -8,7 +8,7 @@
 
 .friendImageAndText {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
 
 
 }
