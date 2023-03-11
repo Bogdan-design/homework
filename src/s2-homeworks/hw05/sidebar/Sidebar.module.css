@@ -1,33 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 .sidebar {
+    position: fixed;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    background: #ffffff;
+    box-shadow: 0px 0px 40px rgba(29, 33, 38, 0.13), 0px 0px 2px rgba(29, 33, 38, 0.1);
 }
 
 .sidebar.open {
     width: 317px;
-    height: 720px;
-    left: 70px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: #ffffff ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*position: fixed;*/
+    /*width: 317px;*/
+    /*height: 720px;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-weight: 600;*/
+    /*font-size: 22px;*/
+    /*line-height: 27px;*/
+    /*color: #FFFFFF;*/
+    /*text-decoration: none;*/
+    /*align-items: center;*/
+    /*max-width: 1200px;*/
+    /*margin: 0 auto;*/
+    /*z-index: 50;*/
+    /*overflow: auto;*/
+    /*padding: 50px 40px;*/
 
-
-    background-color: white;
-    box-shadow: 0px 10px 40px rgba(29, 33, 38, 0.13), 0px 1px 2px rgba(29, 33, 38, 0.1);
-    border-radius: 0px;
 }
 
 .background {
-
+    background: #000000;
+    opacity: 0.3;
 }
 
 .nav {
     display: flex;
-
     flex-direction: column;
-    background-color: white;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 27px;
-    text-decoration: none;
-    color: #3D6B99;
 
 }
 
@@ -38,12 +63,26 @@
 }
 
 .nav a.active {
-    color: #7fb8f1;
-    text-decoration: underline;
+    /*width: 317px;*/
+    /*height: 720px;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    /*background: #ffffff ;*/
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-weight: 600;*/
+    /*font-size: 22px;*/
+    /*line-height: 27px;*/
+    text-decoration-line: underline;
+    color: #0059B2;
 }
-.close {
 
+.close {
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .close img {
+
+
 }

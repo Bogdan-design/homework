@@ -13,13 +13,11 @@
     background-color: #F5F7FB;
     border-radius: 30px;
     width: 976px;
+    height: 40px;
     border: none;
     padding: 0 30px;
     resize: none;
     overflow: hidden;
-
-
-
 }
 
 .button {
@@ -40,7 +38,8 @@
 
 .button:active {
     background: #CC1439;
-    color: black;
+
+
 }
 
 .textarea::placeholder {

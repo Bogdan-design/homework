@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 .container {
+    flex-direction: column;
 }
 
 .wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 6px;
 }
 
 .number {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
 }
