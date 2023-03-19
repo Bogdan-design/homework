@@ -17,6 +17,19 @@ export const pureChange = (sort: string, down: string, up: string) => {
     return up // исправить
 }
 
+// onSortChange = () => {
+//     const { currentSort } = this.state;
+//     let nextSort;
+//
+//     if (currentSort === 'down') nextSort = 'up';
+//     if (currentSort === 'up') nextSort = 'default';
+//     if (currentSort === 'default') nextSort = 'down';
+//
+//
+// });
+// };
+
+
 const SuperSort: React.FC<SuperSortPropsType> = (
     {
         sort, value, onChange, id = 'hw15',

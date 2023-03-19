@@ -6,6 +6,7 @@ import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
 
+
 /*
 * 1 - дописать SuperPagination
 * 2 - дописать SuperSort
@@ -22,6 +23,7 @@ type TechType = {
 }
 
 const getTechs = (params: any) => {
+
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
             'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test3',
@@ -45,6 +47,11 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                setLoading(false)
+                if (res) {
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                }
                 // делает студент
 
                 // сохранить пришедшие данные
@@ -54,13 +61,27 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({page: newPage, count: newCount})
+
+
+
+
+        const paramsQuery: { page?: any,count?:any } = newPage && newCount  ? {page: newPage,count:newCount} : {}
+
+
+        const {params, ...lastQueries} = Object.fromEntries(searchParams)
+        //
+        setSearchParams({...lastQueries, ...paramsQuery})
+
         // делает студент
 
         // setPage(
         // setCount(
 
         // sendQuery(
-        // setSearchParams(
+        // etSearchParams(
 
         //
     }
@@ -68,10 +89,10 @@ const HW15 = () => {
     const onChangeSort = (newSort: string) => {
         // делает студент
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // sendQuery(
+        sendQuery({page: 1, count: count})
         // setSearchParams(
 
         //
